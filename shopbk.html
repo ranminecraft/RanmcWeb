@@ -1,3 +1,17 @@
+<!--
+ _ __ __ _ _ __ (_) ___ __ _ 
+| '__/ _` | '_ \| |/ __/ _` |
+| | | (_| | | | | | (_| (_| |
+|_|  \__,_|_| |_|_|\___\__,_|
+                             
+MIT License
+
+Copyright (c) 2023 阿然姐姐
+
+https://github.com/ranminecraft/Ranmcweb
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,58 +56,7 @@
     
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
-               
-        <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="https://z3.ax1x.com/2021/01/14/sUds6x.png" alt="alternative"></a>
-        
-        <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-awesome fas fa-bars"></span>
-            <span class="navbar-toggler-awesome fas fa-times"></span>
-        </button>
-        <!-- end of mobile menu toggle button -->
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.html#header">首页 <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.html#info">服务器介绍</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="./index.html#list" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">服务器列表</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="spigotserver.html"><span class="item-text">纯净生存1.20.4</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="modserver.html"><span class="item-text">模组空岛1.7.10</span></a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.html#picture">风景欣赏</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll">游戏公告</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="banlist.html">封禁列表</a>
-               </li>
-               <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">友情外链</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="https://minecraft.net/"><span class="item-text">Minecraft</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="https://minepay.top/"><span class="item-text">MinePay</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="https://www.anzifan.com/"><span class="item-text">AnZiFan</span></a>
-                    </div>
-               </li>
-            </ul>
-        </div>
-    </nav> <!-- end of navbar -->
+    <script type="text/javascript" src="./pageJs/header.js"></script>
     <!-- end of navbar -->
 
 
@@ -169,7 +132,7 @@
                     <form data-toggle="validator" data-focus="false">
                         <div class="form-group">
                             <select class="form-control-select" required>
-                                <option class="select-option">[1.20.4]桃花源纯净生存</option>
+                                <option class="select-option"><script type="text/javascript" src="version.js"></script>桃花源纯净生存</option>
                             </select>
                             <div class="help-block with-errors"></div>
                         </div>
@@ -256,32 +219,7 @@
     </div> <!-- end of ex-basic-1 -->
     <!-- end of breadcrumbs -->
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="text-container about">
-                        <h4>关于更多</h4>
-                        <p style="color:#dfe5ec;margin-bottom:0rem">运营By <a href="https://jq.qq.com/?_wv=1027&k=XokgrsUK">阿然</a></p>
-                        <p style="color:#dfe5ec;margin-bottom:0rem">美工By <a href="https://jq.qq.com/?_wv=1027&k=XokgrsUK">阿然</a></p>
-                        <p style="color:#dfe5ec;margin-bottom:0rem">建筑By <a href="https://jq.qq.com/?_wv=1027&k=XokgrsUK">光圈</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p style="color:#dfe5ec;margin-bottom:0rem"> 友情外链&nbsp;<a target="_blank" href="https://minecraft.net/">Minecraft</a>&nbsp;&nbsp;<a target="_blank" href="https://minepay.top/">MinePay</a>&nbsp;&nbsp;<a target="_blank" href="https://www.anzifan.com/">AnZiFan</a></p>
-                    <p class="p-small">开源许可 MIT License Copyright &copy; 2023 <a target="_blank" href="https://github.com/ranminecraft/Ranmcweb">阿然姐姐</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright --> 
+    <script type="text/javascript" src="./pageJs/footer.js"></script>
     <!-- end of copyright -->
     <!-- Scripts -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
