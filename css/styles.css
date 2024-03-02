@@ -1290,7 +1290,7 @@ input[type='checkbox'] {
 	margin-left: 0.1875rem;
 	padding: 0.3125rem 1.375rem 0.25rem 1.375rem;
 	border-radius: 0.25rem;
-	background-color: #f1f4f7;
+	background-color: #f5f5f5;
 	color: #7b7e85;
 	font: 700 0.75rem/1.25rem "Montserrat", sans-serif;
 	cursor: pointer;
@@ -2394,4 +2394,107 @@ a:hover.back-to-top {
 	}
 	/* end of navigation */
 }
-/* end of min-width width 1200px */
+/* end of min-width width 1200px */ 
+ 
+/*
+	banlist表格
+*/
+
+/* 更改分页按钮的文字颜色 */  
+.bootstrap-table .pagination li a {  
+    color: #484a46; /* 这里设置你想要的文字颜色 */  
+    background-color: #f5f5f5; /* 这里设置你想要的背景颜色 */  
+}  
+  
+/* 更改分页按钮的边框颜色 */  
+.bootstrap-table .pagination li a {  
+    border-color: #ddd; /* 这里设置你想要的边框颜色 */  
+}  
+  
+/* 更改当前页按钮的背景颜色 */  
+.bootstrap-table .pagination li.active a,  
+.bootstrap-table .pagination li.active a:hover,  
+.bootstrap-table .pagination li.active a:focus {  
+	color: #ffffff; /* 这里设置你想要的文字颜色 */  
+    background-color: #ff80ab; /* 这里设置当前页按钮的背景颜色 */  
+}  
+  
+/* 更改鼠标悬停时的按钮颜色 */  
+.bootstrap-table .pagination li a:hover,  
+.bootstrap-table .pagination li a:focus {  
+    color: #484a46; /* 这里设置鼠标悬停时的文字颜色 */  
+    text-decoration: none !important;
+    background-color: #e0e0e0; /* 这里设置鼠标悬停时的背景颜色 */  
+}
+  
+/* 更改每页显示数量按钮的容器样式 */  
+.bootstrap-table .fixed-table-pagination .pagination-detail {  
+    /* 在这里添加你想要的容器样式 */  
+    color: #484a46;  
+    font-size: 16px;  
+    margin-top: 12px;  
+}  
+  
+/* 更改每页显示数量按钮本身的样式 */  
+.bootstrap-table .fixed-table-pagination .pagination-detail .btn-group .btn {  
+    /* 在这里添加你想要的按钮样式 */  
+    background-color: #f5f5f5;  
+    border: 1px solid #ddd;  
+    color: #484a46;  
+    padding: 3px 8px;  
+    margin-right: 5px; /* 如果需要的话，添加间距 */  
+}  
+  
+/* 更改当前选中的每页显示数量按钮的样式 */  
+.bootstrap-table .fixed-table-pagination .pagination-detail .btn-group .btn.active {  
+    /* 在这里添加你想要的选中按钮样式 */  
+    background-color: #f8bbd0;  
+    color: #fff;  
+    border-color: #f8bbd0;  
+}  
+  
+/* 更改鼠标悬停时每页显示数量按钮的样式 */  
+.bootstrap-table .fixed-table-pagination .pagination-detail .btn-group .btn:hover,  
+.bootstrap-table .fixed-table-pagination .pagination-detail .btn-group .btn:focus {  
+    color: #484a46; /* 这里设置鼠标悬停时的文字颜色 */  
+    text-decoration: none !important;
+    background-color: #e0e0e0; /* 这里设置鼠标悬停时的背景颜色 */  
+}
+
+/* 更改下拉菜单的容器样式 */  
+.bootstrap-table .fixed-table-pagination .dropdown-menu {  
+    /* 在这里添加你想要的容器样式 */  
+    min-width: 100px; /* 根据需要设置下拉菜单的最小宽度 */  
+    padding: 5px 0; /* 添加一些内边距 */  
+    border-radius: 4px; /* 设置边框圆角 */  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* 添加阴影效果 */  
+}  
+  
+/* 更改下拉菜单中的每个选项的样式 */  
+.bootstrap-table .fixed-table-pagination .dropdown-menu .dropdown-item {  
+    /* 在这里添加你想要的选项样式 */  
+    padding: 5px 10px; /* 设置选项的内边距 */  
+    color: #333; /* 设置文字颜色 */  
+    cursor: pointer; /* 添加鼠标悬停时的手型光标 */  
+}  
+  
+/* 更改鼠标悬停时选项的样式 */  
+.bootstrap-table .fixed-table-pagination .dropdown-menu .dropdown-item:hover,  
+.bootstrap-table .fixed-table-pagination .dropdown-menu .dropdown-item:focus {  
+    /* 在这里添加你想要的悬停样式 */  
+    background-color: #f5f5f5; /* 更改背景颜色 */  
+    color: #000; /* 更改文字颜色 */  
+    text-decoration: none !important;
+}  
+  
+/* 更改当前选中选项的样式 */  
+.bootstrap-table .fixed-table-pagination .dropdown-menu .dropdown-item.active,  
+.bootstrap-table .fixed-table-pagination .dropdown-menu .dropdown-item:active {  
+    /* 在这里添加你想要的选中样式 */  
+    background-color: #ff80ab; /* 更改背景颜色 */  
+    color: #fff; /* 更改文字颜色 */  
+}
+  
+.refresh-button {  
+    display: none; /* 隐藏元素 */  
+}

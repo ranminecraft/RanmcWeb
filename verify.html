@@ -20,18 +20,14 @@ https://github.com/ranminecraft/Ranmcweb
     <meta name="referrer" content="no-referrer" />
 
     <!-- Website Title -->
-    <title>模组空岛-桃花源-我的世界服务器(Minecraft)</title>
+    <title>验证信息-桃花源-我的世界服务器(Minecraft)</title>
 
     <!-- Styles -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet"> -->
-    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
-    <link href="https://cdn.bootcdn.net/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.min.css" rel="stylesheet">
     
     <!-- Favicon  -->
     <link rel="icon" href="https://s1.ax1x.com/2020/08/08/a4VB1f.png">
-
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
@@ -44,17 +40,18 @@ https://github.com/ranminecraft/Ranmcweb
         </div>
     </div>
     <!-- end of preloader -->
+    
 
     <!-- Navbar -->
     <script type="text/javascript" src="./pageJs/header.js"></script>
     <!-- end of navbar -->
-    
+
     <!-- Header -->
     <header id="header" class="ex-header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>模组空岛服</h1>
+                    <h1>验证信息</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -68,7 +65,7 @@ https://github.com/ranminecraft/Ranmcweb
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.html">首页</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;</span><a href="index.html#list">服务器列表</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;模组生存</span>
+                        <a href="index.html">首页</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;验证信息</span>
                     </div> <!-- end of breadcrumbs -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -82,7 +79,7 @@ https://github.com/ranminecraft/Ranmcweb
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-container">
-                        <h3>服务器当前维护中...</h3>
+                        <h3 id="result">服务器当前维护中...</h3>
                     </div> <!-- end of text-container -->
                 <a class="btn-outline-reg" href="index.html">返回</a>
                 </div> <!-- end of text-container -->
@@ -96,7 +93,7 @@ https://github.com/ranminecraft/Ranmcweb
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.html">首页</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;</span><a href="index.html#list">服务器列表</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;模组生存</span>
+                        <a href="index.html">首页</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;验证信息</span>
                     </div> <!-- end of breadcrumbs -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -115,5 +112,33 @@ https://github.com/ranminecraft/Ranmcweb
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
     <script src="js/js.js"></script>
+    <script>  
+        document.addEventListener("DOMContentLoaded", function() {  
+        // 获取h1元素  
+        const contentElement = document.getElementById('result');  
+      
+        // 获取当前页面的URI  
+        const currentURI = 'https://stmcicp.ranmc.cc:2263/verify?' + window.location.search;  
+      
+        // 使用fetch API发送GET请求  
+        fetch(currentURI)  
+            .then(response => {  
+                // 确保响应是ok的  
+                if (!response.ok) {  
+                    throw new Error('无法连接认证服务器，请联系管理员');  
+                }  
+                // 读取并返回响应内容  
+                return response.text();  
+            })  
+            .then(data => {  
+                // 将获取到的数据设置到h1元素中  
+                contentElement.textContent = data;  
+            })  
+            .catch(error => {  
+                // 如果发生错误，显示错误消息  
+                contentElement.textContent = '发生错误:' + error.message;  
+            });  
+    });
+</script>  
 </body>
 </html>
