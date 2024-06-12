@@ -52,6 +52,8 @@ document.writeln(`
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="https://minepay.top/"><span class="item-text">MinePay</span></a>
                         <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="https://minelive.top/"><span class="item-text">MineLive</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="https://www.anzifan.com/"><span
                                 class="item-text">AnZiFan</span></a>
                     </div>

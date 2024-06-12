@@ -25,7 +25,7 @@ document.writeln(`
                 <p style="color:#dfe5ec;margin-bottom:0rem"> 友情外链&nbsp;<a target="_blank"
                         href="https://minecraft.net/">Minecraft</a>&nbsp;&nbsp;<a target="_blank"
                         href="https://minepay.top/">MinePay</a>&nbsp;&nbsp;<a target="_blank"
-                        href="https://www.anzifan.com/">AnZiFan</a></p>
+                        href="https://minelive.top/">MineLive</a></p>
                 <p class="p-small">MIT License Copyright &copy; 2023 <a target="_blank"
                         href="https://github.com/ranminecraft/Ranmcweb">阿然姐姐丨版权所有</a></p>
             </div> <!-- end of col -->
