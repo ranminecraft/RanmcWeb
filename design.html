@@ -1,0 +1,133 @@
+<!--
+ _ __ __ _ _ __ (_) ___ __ _ 
+| '__/ _` | '_ \| |/ __/ _` |
+| | | (_| | | | | | (_| (_| |
+|_|  \__,_|_| |_|_|\___\__,_|
+                             
+MIT License
+
+Copyright (c) 2023 阿然姐姐
+
+https://github.com/ranminecraft/Ranmcweb
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="referrer" content="no-referrer" />
+    
+    <meta name="baidu-site-verification" content="code-xVJuvQdcb0" />
+    <meta name="google-site-verification" content="8ITwvem-6pEqSsllOzGsqAaYVkkT9eI5UGBbP3xVaDs" />
+    <!-- Website Title -->
+    <title>建筑比赛-桃花源-我的世界服务器(Minecraft)</title>
+    <script type="text/javascript">  
+         function countTime() {  
+             //获取当前时间  
+             var date = new Date();  
+             var now = date.getTime();  
+             //设置截止时间
+             var str="2024/7/10 20:00:00";
+             var endDate = new Date(str); 
+             var end = endDate.getTime();  
+             
+             //时间差  
+             var leftTime = end-now; 
+             //定义变量 d,h,m,s保存倒计时的时间  
+             var d,h,m,s;  
+             if (leftTime>=0) {  
+                 d = Math.floor(leftTime/1000/60/60/24);  
+                 h = Math.floor(leftTime/1000/60/60%24);  
+                 m = Math.floor(leftTime/1000/60%60);  
+                 s = Math.floor(leftTime/1000%60);                     
+             }  
+             //将倒计时赋值到div中  
+             document.getElementById("_d").innerHTML = d+"天";  
+             document.getElementById("_h").innerHTML = h+"时";  
+             document.getElementById("_m").innerHTML = m+"分";  
+             document.getElementById("_s").innerHTML = s+"秒";  
+             if (s == undefined) {
+                document.getElementById("_d").innerHTML = "统";  
+                document.getElementById("_h").innerHTML = "计";  
+                document.getElementById("_m").innerHTML = "完";  
+                document.getElementById("_s").innerHTML = "成";  
+             }
+             //递归每秒调用countTime方法，显示动态时间效果  
+             setTimeout(countTime,1000);
+   
+         }  
+     </script> 
+    
+    <!-- Styles -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+    
+    <!-- Favicon  -->
+    <link rel="icon" href="https://s1.ax1x.com/2020/08/08/a4VB1f.png">
+
+</head>
+<body data-spy="scroll" data-target=".fixed-top" onload="countTime()">
+    
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+    <!-- Navbar -->
+    <script type="text/javascript" src="./pageJs/header.js"></script>
+    <!-- end of navbar -->
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h1>建筑比赛 <span id="js-rotating"> 花落谁家, 揭晓在即, 胜败未分, 拭目以待</span></h1>
+                            <h2 style="color:white" style="margin-bottom:1rem">
+                            <div>  
+                                <span id="_d">00</span>  
+                                <span id="_h">00</span>  
+                                <span id="_m">00</span>  
+                                <span id="_s">00</span>  
+                            </div> 
+                            </h2>
+                            <p style="color:white">结果公布倒计时<br>桃源建筑比赛 第一届</p>
+                            
+                            <a class="btn-solid-lg page-scroll" href="https://jq.qq.com/?_wv=1027&k=h9wipMdH" target="_blank" style="margin-top:2rem">加群讨论</a>
+                        </div>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+
+    <script type="text/javascript" src="./pageJs/footer.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/Morphext/2.4.4/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    
+    <script src="js/scripts.js"></script>
+    
+    <!-- Custom scripts -->
+</body>
+</html>
