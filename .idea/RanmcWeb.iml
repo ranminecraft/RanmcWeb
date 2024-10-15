@@ -11,5 +11,6 @@
     <orderEntry type="library" name="swiper" level="application" />
     <orderEntry type="library" name="jquery.magnific-popup" level="application" />
     <orderEntry type="library" name="morphext" level="application" />
+    <orderEntry type="library" name="popper" level="application" />
   </component>
 </module>
