@@ -696,7 +696,7 @@ input[type='checkbox'] {
 .navbar-custom .navbar-toggler {
 	border: none;
 	color: #fff;
-	background: url('image/sUwLKx.png');
+	background: url('../image/sUwLKx.png');
 	background-size: cover;
 }
 
@@ -722,7 +722,7 @@ input[type='checkbox'] {
 /*    04. Header     */
 /*********************/
 .header {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('image/pAthbOx.jpg') center center no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../image/pAthbOx.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -824,7 +824,6 @@ input[type='checkbox'] {
 	position: absolute;
 	width: 6rem;
 	height: 6rem;
-	background: url('../images/hexagon-green.svg') center center no-repeat;
 	background-size: 6rem 6rem;
 }
 
@@ -925,7 +924,7 @@ input[type='checkbox'] {
 /*************************/
 .accordion .area-1 {
 	height: 27rem;
-	background: url('image/pAt4Kcn.jpg') center center no-repeat;
+	background: url('../image/pAt4Kcn.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -1115,7 +1114,7 @@ input[type='checkbox'] {
 
 .tabs .area-2 {
 	height: 27rem;
-	background: url('image/pAt4N9J.jpg') center center no-repeat;
+	background: url('../image/pAt4N9J.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -1498,13 +1497,11 @@ input[type='checkbox'] {
 	left: 0;
 	width: 1.75rem;
 	height: 1.75rem;
-	background: url('../images/hexagon-green.svg') center center no-repeat;
 	background-size: 1.75rem 1.75rem;
 	transition: all 0.2s ease;
 }
 
 .basic-2 .fa-stack:hover .hexagon {
-	background: url('../images/hexagon-white.svg') center center no-repeat;
 	background-size: 1.75rem 1.75rem;
 }
 
@@ -1639,13 +1636,11 @@ input[type='checkbox'] {
 	position: absolute;
 	width: 3.25rem;
 	height: 3.25rem;
-	background: url('../images/hexagon-green.svg') center center no-repeat;
 	background-size: 3.25rem 3.25rem;
 	transition: all 0.2s ease;
 }
 
 .form-2 .fa-stack:hover .hexagon {
-	background: url('../images/hexagon-white.svg') center center no-repeat;
 	background-size: 3.25rem 3.25rem;
 }
 
@@ -1999,13 +1994,11 @@ a:hover.back-to-top {
 		width: 1.625rem;
 		height: 1.625rem;
 		position: absolute;
-		background: url('../images/hexagon-green.svg') center center no-repeat;
 		background-size: 1.625rem 1.625rem;
 		transition: all 0.2s ease;
 	}
 
 	.navbar-custom .fa-stack:hover .hexagon {
-		background: url('../images/hexagon-white.svg') center center no-repeat;
 		background-size: 1.625rem 1.625rem;
 	}
 	
