@@ -6,7 +6,7 @@ document.writeln(`
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="https://z3.ax1x.com/2021/01/14/sUds6x.png"
+        <a class="navbar-brand logo-image" href="index.html"><img src="image/sUds6x.png"
                 alt="alternative"></a>
 
         <!-- Mobile Menu Toggle Button -->
