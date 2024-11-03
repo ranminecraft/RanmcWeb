@@ -58,11 +58,6 @@ document.writeln(`
                                 class="item-text">AnZiFan</span></a>
                     </div>
                 </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="halloween.html">天地异变</a>
-                </li>
-                
             </ul>
         </div>
     </nav> <!-- end of navbar -->
