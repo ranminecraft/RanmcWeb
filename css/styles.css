@@ -696,7 +696,7 @@ input[type='checkbox'] {
 .navbar-custom .navbar-toggler {
 	border: none;
 	color: #fff;
-	background: url('img/sUwLKx.png');
+	background: url('/imgsUwLKx.png');
 	background-size: cover;
 }
 
@@ -722,7 +722,7 @@ input[type='checkbox'] {
 /*    04. Header     */
 /*********************/
 .header {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('img/achXdg.jpg') center center no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/imgachXdg.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -924,7 +924,7 @@ input[type='checkbox'] {
 /*************************/
 .accordion .area-1 {
 	height: 27rem;
-	background: url('img/a4V6BQ.jpg') center center no-repeat;
+	background: url('/imga4V6BQ.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -1114,7 +1114,7 @@ input[type='checkbox'] {
 
 .tabs .area-2 {
 	height: 27rem;
-	background: url('img/ac5ZB8.jpg') center center no-repeat;
+	background: url('/imgac5ZB8.jpg') center center no-repeat;
 	background-size: cover;
 }
 
