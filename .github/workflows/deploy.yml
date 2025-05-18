@@ -1,12 +1,20 @@
-name: Build and Deployon:
+name: Build and Deploy
+
+on:
   push:
     branches: ["main"]
-  workflow_dispatch:permissions:
+  workflow_dispatch:
+
+permissions:
   contents: read
   pages: write
-  id-token: writeconcurrency:
+  id-token: write
+
+concurrency:
   group: "pages"
-  cancel-in-progress: falsejobs:
+  cancel-in-progress: false
+
+jobs:
   build:
     environment:
       name: github-pages
@@ -14,16 +22,28 @@ name: Build and Deployon:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v4      - name: Setup Node.js
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: https://registry.npmjs.org/      - name: Install dependencies
-        run: npm install      - name: Build project
-        run: node build.js      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5      - name: Upload artifact
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: node build.js
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'      - name: Deploy to GitHub Pages
+          path: './dist'
+
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
