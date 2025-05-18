@@ -1,5 +1,7 @@
 (function($) {
-    "use strict";	/* Preloader */
+    "use strict";
+
+	/* Preloader */
 	$(window).on('load', function() {
 		var preloaderFadeOutTime = 500;
 		function hidePreloader() {
@@ -10,6 +12,8 @@
 		}
 		hidePreloader();
 	});
+
+	
 	/* Navbar Scripts */
 	// jQuery to collapse the navbar on scroll
     $(window).on('scroll load', function() {
@@ -18,7 +22,9 @@
 		} else {
 			$(".fixed-top").removeClass("top-nav-collapse");
 		}
-    });	// jQuery for page scrolling feature - requires jQuery Easing plugin
+    });
+
+	// jQuery for page scrolling feature - requires jQuery Easing plugin
 	$(function() {
 		$(document).on('click', 'a.page-scroll', function(event) {
 			var $anchor = $(this);
@@ -27,11 +33,15 @@
 			}, 600, 'easeInOutExpo');
 			event.preventDefault();
 		});
-	});    // closes the responsive menu on menu item click
+	});
+
+    // closes the responsive menu on menu item click
     $(".navbar-nav li a").on("click", function(event) {
     if (!$(this).parent().hasClass('dropdown'))
         $(".navbar-collapse").collapse('hide');
     });
+
+
     /* Rotating Text - Morphtext */
 	$("#js-rotating").Morphext({
 		// The [in] animation type. Refer to Animate.css for a list of available animations.
@@ -44,7 +54,9 @@
 			// Called after the entrance animation is executed.
 		}
     });
-        /* Card Slider - Swiper */
+    
+
+    /* Card Slider - Swiper */
 	var cardSlider = new Swiper('.card-slider', {
 		autoplay: {
             delay: 4000,
@@ -68,6 +80,8 @@
             } 
         }
     });
+
+    
     /* Lightbox - Magnific Popup */
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -80,7 +94,9 @@
 		removalDelay: 300,
 		mainClass: 'my-mfp-slide-bottom'
     });
-        /* Filter - Isotope */
+    
+
+    /* Filter - Isotope */
     var $grid = $('.grid').isotope({
         // options
         itemSelector: '.element-item',
@@ -101,7 +117,9 @@
             $( this ).addClass('is-checked');
         });	
     });
-        /* Counter - CountTo */
+    
+
+    /* Counter - CountTo */
 	var a = 0;
 	$(window).scroll(function() {
 		if ($('#counter').length) { // checking if CountTo section exists in the page, if not it will not run the script and avoid errors	
@@ -131,6 +149,8 @@
 			}
 		}
     });
+
+
     /* Move Form Fields Label When User Types */
     // for input and textarea fields
     $("input, textarea").keyup(function(){
@@ -140,6 +160,8 @@
 			$(this).removeClass('notEmpty');
 		}
     });
+
+
     /* Call Me Form */
     $("#callMeForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
@@ -151,7 +173,9 @@
             event.preventDefault();
             lsubmitForm();
         }
-    });    function lsubmitForm() {
+    });
+
+    function lsubmitForm() {
         // initiate variables with form content
 		var name = $("#lname").val();
 		var phone = $("#lphone").val();
@@ -172,15 +196,21 @@
                 }
             }
         });
-	}    function lformSuccess() {
+	}
+
+    function lformSuccess() {
         $("#callMeForm")[0].reset();
         lsubmitMSG(true, "Request Submitted!");
         $("input").removeClass('notEmpty'); // resets the field label after submission
-    }    function lformError() {
+    }
+
+    function lformError() {
         $("#callMeForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             $(this).removeClass();
         });
-	}    function lsubmitMSG(valid, msg) {
+	}
+
+    function lsubmitMSG(valid, msg) {
         if (valid) {
             var msgClasses = "h3 text-center tada animated";
         } else {
@@ -188,6 +218,8 @@
         }
         $("#lmsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
+
+
     /* Contact Form */
     $("#contactForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
@@ -199,7 +231,9 @@
             event.preventDefault();
             csubmitForm();
         }
-    });    function csubmitForm() {
+    });
+
+    function csubmitForm() {
         // initiate variables with form content
 		var name = $("#cname").val();
 		var email = $("#cemail").val();
@@ -218,16 +252,22 @@
                 }
             }
         });
-	}    function cformSuccess() {
+	}
+
+    function cformSuccess() {
         $("#contactForm")[0].reset();
         csubmitMSG(true, "Message Submitted!");
         $("input").removeClass('notEmpty'); // resets the field label after submission
         $("textarea").removeClass('notEmpty'); // resets the field label after submission
-    }    function cformError() {
+    }
+
+    function cformError() {
         $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             $(this).removeClass();
         });
-	}    function csubmitMSG(valid, msg) {
+	}
+
+    function csubmitMSG(valid, msg) {
         if (valid) {
             var msgClasses = "h3 text-center tada animated";
         } else {
@@ -235,6 +275,8 @@
         }
         $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
+
+
     /* Privacy Form */
     $("#privacyForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
@@ -246,7 +288,9 @@
             event.preventDefault();
             psubmitForm();
         }
-    });    function psubmitForm() {
+    });
+
+    function psubmitForm() {
         // initiate variables with form content
 		var name = $("#pname").val();
 		var email = $("#pemail").val();
@@ -266,15 +310,21 @@
                 }
             }
         });
-	}    function pformSuccess() {
+	}
+
+    function pformSuccess() {
         $("#privacyForm")[0].reset();
         psubmitMSG(true, "Request Submitted!");
         $("input").removeClass('notEmpty'); // resets the field label after submission
-    }    function pformError() {
+    }
+
+    function pformError() {
         $("#privacyForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             $(this).removeClass();
         });
-	}    function psubmitMSG(valid, msg) {
+	}
+
+    function psubmitMSG(valid, msg) {
         if (valid) {
             var msgClasses = "h3 text-center tada animated";
         } else {
@@ -282,7 +332,9 @@
         }
         $("#pmsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
-        /* Back To Top Button */
+    
+
+    /* Back To Top Button */
     // create the back to top button
     $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
     var amountScrolled = 700;
@@ -293,7 +345,11 @@
             $('a.back-to-top').fadeOut('500');
         }
     });
+
+
 	/* Removes Long Focus On Buttons */
 	$(".button, a, button").mouseup(function() {
 		$(this).blur();
-	});})(jQuery);
+	});
+
+})(jQuery);
