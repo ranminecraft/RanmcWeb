@@ -1,6 +1,4 @@
-document.writeln(`
-<!-- Footer -->
-<div class="footer">
+document.writeln(`<div class="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -16,9 +14,7 @@ document.writeln(`
             </div>
         </div>
     </div>
-</div>
-<!-- Copyright -->
-<div class="copyright">
+</div><div class="copyright">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -28,8 +24,8 @@ document.writeln(`
                         href="https://minelive.top/">MineLive</a></p>
                 <p class="p-small">MIT License Copyright &copy; 2023 <a target="_blank"
                         href="https://github.com/ranminecraft/Ranmcweb">阿然姐姐丨版权所有</a></p>
-            </div> <!-- end of col -->
-        </div> <!-- enf of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of copyright -->
+            </div>
+        </div>
+    </div>
+</div>
 `)

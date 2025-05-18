@@ -1,220 +1,159 @@
-<!--
- _ __ __ _ _ __ (_) ___ __ _ 
-| '__/ _` | '_ \| |/ __/ _` |
-| | | (_| | | | | | (_| (_| |
-|_|  \__,_|_| |_|_|\___\__,_|
-                             
-MIT License
-
-Copyright (c) 2023 阿然姐姐
-
-https://github.com/ranminecraft/Ranmcweb
-
--->
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="referrer" content="no-referrer" />
-
-    <!-- Website Title -->
     <title>地图下载-桃花源-我的世界服务器(Minecraft)</title>
-    
-    <!-- Styles -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    
-    <!-- Favicon  -->
     <link rel="icon" href="img/icon.png">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
-    
-    <!-- Preloader -->
-    <div class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
+<div class="spinner-wrapper">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<script type="text/javascript" src="constant/header.js"></script>
+<header id="header" class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>地图下载</h1>
+            </div>
         </div>
     </div>
-    <!-- end of preloader -->
-    
-
-    <!-- Navbar -->
-    <script type="text/javascript" src="constant/header.js"></script>
-    <!-- end of navbar -->
-
-
-    <!-- Header -->
-    <header id="header" class="ex-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>地图下载</h1>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </header> <!-- end of ex-header -->
-    <!-- end of header -->
-
-
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="index.html">首页</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;地图下载</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
-
-
-    <!-- Terms Content -->
-    <div class="ex-basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                
-                    <div class="text-container">
-                        
-                        
-                        
-                        <!-- Call Me -->
-    <div id="callMe" class="form-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <h2 class="white">使用教程</h2>
-                        
-                        <ul class="list-unstyled li-space-lg white">
-                        <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">请输入你的坐标点击下载<br>下载完成后打开游戏1.16<br>新建一个地图存档后退出<br>把文件复制到地图文件夹<br>再进入游戏传送到该坐标</div>
-                            </li>
-                            <i class="fas fa-square"></i>
-                                <div class="media-body">游戏目录\.minecraft\saves\世界名称\region</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                   
-                    <!-- Call Me Form -->
-                    <form data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <select class="form-control-select" required>
-                                <option class="select-option">[1.16.5]桃花源纯净生存</option>
-                            </select>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" maxlength="15" class="form-control-input" id="locationX" name="locationX" required>
-                            <label class="label-control" for="playername">X轴坐标</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" maxlength="15" class="form-control-input" id="locationZ" name="locationZ" required>
-                            <label class="label-control" for="playername">Z轴坐标</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <button onclick="buy()" class="form-control-submit-button">下载文件</button>
-                            <a target="_blank" href="https://www.ranmc.cc/plugins/residence/local.txt">查看领地坐标</a>
-                        </div>
-                        <div class="form-message">
-                            <div id="lmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
-                    </form>
-                    <!-- end of call me form -->
-                    
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-1 -->
-    <!-- end of call me -->
-                        
-                    </div> <!-- end of text-container -->
-                    <a class="btn-outline-reg" href="index.html">返回</a>
-                    
+</header>
+<div class="ex-basic-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumbs">
+                    <a href="index.html">首页</a>
+                    <span>&nbsp;&nbsp;>&nbsp;&nbsp;地图下载</span>
                 </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic -->
-    <!-- end of terms content -->
-
-    
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="index.html">首页</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;礼包充值</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
-
-    <script type="text/javascript" src="constant/footer.js"></script>
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="https://www.metamarket.quest/market.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.min.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
-    <script>
-        function buy() {
-            if ($("#locationX").val() > 50000 || $("#locationX").val() < -50000 || $("#locationZ").val() > 50000 || $("#locationZ").val() < -50000) {
-                if (window.confirm("位置不存在,超出地图范围")) {
-                        //alert("确定");
-                        return true;
-                    } else {
-                        //alert("取消");
-                        return false;
-                    }
-            }
-            
-            var lx = $("#locationX").val();
-            var lz = $("#locationZ").val();
-            
-            lx = parseInt(lx/511);
-            lz = parseInt(lz/511);
-            
-            if ($("#locationX").val() < 0) {
-                lx--;
-            }
-            
-            if ($("#locationZ").val() < 0) {
-                lz--;
-            }
-            
-            if (lx !== "" && lz !== "") {
-                if (window.confirm("请下载文件r." + lx + "." + lz + ".mca (提取码2333)")) {
-                        window.open("https://pan.baidu.com/s/1LYfjd9G1jVFi4JVQiphIXQ");
-                        //alert("确定");
-                        return true;
-                    } else {
-                        //alert("取消");
-                        window.open("https://pan.baidu.com/s/1LYfjd9G1jVFi4JVQiphIXQ");
-                        return false;
-                    }
-                //window.open("http://s3.fxidc.net:20212/r." + lx + "." + lz + ".mca");
-            }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ex-basic-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-container">
+                    <div id="callMe" class="form-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="text-container">
+                                        <h2 class="white">使用教程</h2>
+                                        <ul class="list-unstyled li-space-lg white">
+                                            <li class="media">
+                                                <i class="fas fa-square"></i>
+                                                <div class="media-body">请输入你的坐标点击下载 <br>下载完成后打开游戏1.16 <br>新建一个地图存档后退出 <br>把文件复制到地图文件夹 <br>再进入游戏传送到该坐标 </div>
+                                            </li>
+                                            <i class="fas fa-square"></i>
+                                            <div class="media-body">游戏目录\.minecraft\saves\世界名称\region</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <form data-toggle="validator" data-focus="false">
+                                        <div class="form-group">
+                                            <select class="form-control-select" required>
+                                                <option class="select-option">[1.16.5]桃花源纯净生存</option>
+                                            </select>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" maxlength="15" class="form-control-input" id="locationX" name="locationX" required>
+                                            <label class="label-control" for="playername">X轴坐标</label>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" maxlength="15" class="form-control-input" id="locationZ" name="locationZ" required>
+                                            <label class="label-control" for="playername">Z轴坐标</label>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button onclick="buy()" class="form-control-submit-button">下载文件</button>
+                                            <a target="_blank" href="https://www.ranmc.cc/plugins/residence/local.txt">查看领地坐标</a>
+                                        </div>
+                                        <div class="form-message">
+                                            <div id="lmsgSubmit" class="h3 text-center hidden"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn-outline-reg" href="index.html">返回</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ex-basic-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumbs">
+                    <a href="index.html">首页</a>
+                    <span>&nbsp;&nbsp;>&nbsp;&nbsp;礼包充值</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="constant/footer.js"></script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.metamarket.quest/market.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/morphext.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+    function buy() {
+      if ($("#locationX").val() > 50000 || $("#locationX").val() < -50000 || $("#locationZ").val() > 50000 || $("#locationZ").val() < -50000) {
+        if (window.confirm("位置不存在,超出地图范围")) {
+          //alert("确定");
+          return true;
+        } else {
+          //alert("取消");
+          return false;
         }
-    </script>
-    <script type="text/javascript" src="constant/collect.js"></script>
+      }
+      var lx = $("#locationX").val();
+      var lz = $("#locationZ").val();
+      lx = parseInt(lx / 511);
+      lz = parseInt(lz / 511);
+      if ($("#locationX").val() < 0) {
+        lx--;
+      }
+      if ($("#locationZ").val() < 0) {
+        lz--;
+      }
+      if (lx !== "" && lz !== "") {
+        if (window.confirm("请下载文件r." + lx + "." + lz + ".mca (提取码2333)")) {
+          window.open("https://pan.baidu.com/s/1LYfjd9G1jVFi4JVQiphIXQ");
+          //alert("确定");
+          return true;
+        } else {
+          //alert("取消");
+          window.open("https://pan.baidu.com/s/1LYfjd9G1jVFi4JVQiphIXQ");
+          return false;
+        }
+        //window.open("http://s3.fxidc.net:20212/r." + lx + "." + lz + ".mca");
+      }
+    }
+</script>
+<script type="text/javascript" src="constant/collect.js"></script>
 </body>
 </html>

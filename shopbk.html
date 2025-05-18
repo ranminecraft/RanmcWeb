@@ -1,234 +1,158 @@
-<!--
- _ __ __ _ _ __ (_) ___ __ _ 
-| '__/ _` | '_ \| |/ __/ _` |
-| | | (_| | | | | | (_| (_| |
-|_|  \__,_|_| |_|_|\___\__,_|
-                             
-MIT License
-
-Copyright (c) 2023 阿然姐姐
-
-https://github.com/ranminecraft/Ranmcweb
-
--->
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="referrer" content="no-referrer" />
-
-    <!-- Website Title -->
     <title>礼包充值-桃花源-我的世界服务器(Minecraft)</title>
-    
-    <!-- Styles -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    
-    <!-- Favicon  -->
     <link rel="icon" href="img/icon.png">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
-    
-    <!-- Preloader -->
-    <div class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
+<div class="spinner-wrapper">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<script type="text/javascript" src="constant/header.js"></script>
+<header id="header" class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>礼包充值</h1>
+            </div>
         </div>
     </div>
-    <!-- end of preloader -->
-    
-
-    <!-- Navbar -->
-    <script type="text/javascript" src="constant/header.js"></script>
-    <!-- end of navbar -->
-
-
-    <!-- Header -->
-    <header id="header" class="ex-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>礼包充值</h1>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </header> <!-- end of ex-header -->
-    <!-- end of header -->
-
-
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="index.html">首页</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;礼包充值</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
-
-
-    <!-- Terms Content -->
-    <div class="ex-basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                
-                    <div class="text-container">
-                        
-                        
-                        
-                        <!-- Call Me -->
-    <div id="callMe" class="form-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <h2 class="white">请移步https://minepay.top</h2>
-                        
-                        <ul class="list-unstyled li-space-lg white">
-                        <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">为维持服务器开销 服务器现在开放充值礼包</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">请仔细核对玩家名字大小写否则导致充值失败</div>
-                            </li>
-                            <!li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">若在充值过程遇到任何问题都可加群私信群主</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">春风桃李花开日，秋雨梧桐叶落时。<br> -白居易《长恨歌》</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                   
-                    <!-- Call Me Form -->
-                    <form data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <select class="form-control-select" required>
-                                <option class="select-option"><script type="text/javascript" src="constant/version.js"></script>桃花源纯净生存</option>
-                            </select>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" maxlength="15" class="form-control-input" id="player" name="player" required>
-                            <label class="label-control" for="player">玩家名字</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        
-                        <div class="form-group checkbox white">
-                        
-                        <div class="form-group">
-                            <select class="form-control-select" id="kit" name="kit" required>
-                                <option class="select-option" value="VIP礼包">[传说]VIP权限/月 20元</option>
-                                <option class="select-option" value="SVIP礼包">[史诗]SVIP权限/永久 50元</option>
-                                <option class="select-option" value="SVIP升级包">VIP升级SVIP礼包/永久 30元</option>
-                                <option class="select-option" value="金券1000">[金券]x1000(送500) 1元</option>
-                                <option class="select-option" value="金券5000">[金券]x5000(送3000) 5元</option>
-                                <option class="select-option" value="金券10000">[金券]x10000(送10000) 10元</option>
-                                <option class="select-option" value="君临天下">[称号]君临天下(送5000金券) 20元</option>
-                                <option class="select-option" value="绝代佳人">[称号]绝代佳人(送5000金券) 20元</option>
-                                <option class="select-option" value="寒梅傲兮">[称号]寒梅傲兮(送5000金券) 20元</option>
-                                <option class="select-option" value="玉树临风">[称号]玉树临风(送5000金券) 20元</option>
-                                <option class="select-option" value="轻絮扬兮">[称号]轻絮扬兮(送5000金券) 20元</option>
-                                <option class="select-option" value="霓裳仙子">[称号]霓裳仙子(送5000金券) 20元</option>
-                                <option class="select-option" value="西邪混沌">[称号]西邪混沌(送10000金券) 30元</option>
-                                <option class="select-option" value="归隐居士">[称号]归隐居士(送10000金券) 30元</option>
-                                <option class="select-option" value="风林火山">[称号]风林火山(送10000金券) 30元</option>
-                                <option class="select-option" value="千古圣人">[称号]千古圣人(送10000金券) 30元</option>
-                                <option class="select-option" value="东神饕餮">[称号]东神饕餮(送10000金券) 30元</option>
-                            </select>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        
-                        <div class="form-group checkbox white">
-                        <div class="form-group">
-                            <select class="form-control-select" id="payway" name="payway" required>
-                                <option class="select-option" value="wx">微信</option>
-                                <option class="select-option" value="ali">支付宝</option>
-                            </select>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <button onclick="buy()" class="form-control-submit-button">购买礼包</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="lmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
-                    </form>
-                    <!-- end of call me form -->
-                    
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-1 -->
-    <!-- end of call me -->
-
-                        
-                        
-                        
-                    </div> <!-- end of text-container -->
-                    <a class="btn-outline-reg" href="index.html">返回</a>
-                    
+</header>
+<div class="ex-basic-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumbs">
+                    <a href="index.html">首页</a>
+                    <span>&nbsp;&nbsp;>&nbsp;&nbsp;礼包充值</span>
                 </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic -->
-    <!-- end of terms content -->
-
-    
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="index.html">首页</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;礼包充值</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
-
-    <script type="text/javascript" src="constant/footer.js"></script>
-    <!-- end of copyright -->
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.min.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
-    <script>
-        function buy() {
-            var player = $("#player").val();
-            var kit = $("#kit").val();
-            var payway = $("#payway").val();
-            
-            if (player !== "") {
-                window.open("http://pay.ranmc.cn:666/?player=" + player + "&kit=" + kit + "&payway=" + payway);
-
-            }
-        }
-    </script>
-    <script type="text/javascript" src="constant/collect.js"></script>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ex-basic-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-container">
+                    <div id="callMe" class="form-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="text-container">
+                                        <h2 class="white">请移步https://minepay.top</h2>
+                                        <ul class="list-unstyled li-space-lg white">
+                                            <li class="media">
+                                                <i class="fas fa-square"></i>
+                                                <div class="media-body">为维持服务器开销 服务器现在开放充值礼包</div>
+                                            </li>
+                                            <li class="media">
+                                                <i class="fas fa-square"></i>
+                                                <div class="media-body">请仔细核对玩家名字大小写否则导致充值失败</div>
+                                            </li>
+                                            <!li class="media"><i class="fas fa-square"></i>
+                                            <div class="media-body">若在充值过程遇到任何问题都可加群私信群主</div>
+                                            </li>
+                                            <li class="media"><i class="fas fa-square"></i>
+                                                <div class="media-body">春风桃李花开日，秋雨梧桐叶落时。<br> -白居易《长恨歌》</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <form data-toggle="validator" data-focus="false">
+                                        <div class="form-group"><select class="form-control-select" required>
+                                            <option class="select-option">
+                                                <script type="text/javascript" src="constant/version.js"></script>桃花源纯净生存
+                                            </option>
+                                        </select>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="form-group"><input type="text" maxlength="15" class="form-control-input" id="player" name="player" required><label class="label-control" for="player">玩家名字</label>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="form-group checkbox white">
+                                            <div class="form-group"><select class="form-control-select" id="kit" name="kit" required>
+                                                <option class="select-option" value="VIP礼包">[传说]VIP权限/月 20元</option>
+                                                <option class="select-option" value="SVIP礼包">[史诗]SVIP权限/永久 50元</option>
+                                                <option class="select-option" value="SVIP升级包">VIP升级SVIP礼包/永久 30元</option>
+                                                <option class="select-option" value="金券1000">[金券]x1000(送500) 1元</option>
+                                                <option class="select-option" value="金券5000">[金券]x5000(送3000) 5元</option>
+                                                <option class="select-option" value="金券10000">[金券]x10000(送10000) 10元</option>
+                                                <option class="select-option" value="君临天下">[称号]君临天下(送5000金券) 20元</option>
+                                                <option class="select-option" value="绝代佳人">[称号]绝代佳人(送5000金券) 20元</option>
+                                                <option class="select-option" value="寒梅傲兮">[称号]寒梅傲兮(送5000金券) 20元</option>
+                                                <option class="select-option" value="玉树临风">[称号]玉树临风(送5000金券) 20元</option>
+                                                <option class="select-option" value="轻絮扬兮">[称号]轻絮扬兮(送5000金券) 20元</option>
+                                                <option class="select-option" value="霓裳仙子">[称号]霓裳仙子(送5000金券) 20元</option>
+                                                <option class="select-option" value="西邪混沌">[称号]西邪混沌(送10000金券) 30元</option>
+                                                <option class="select-option" value="归隐居士">[称号]归隐居士(送10000金券) 30元</option>
+                                                <option class="select-option" value="风林火山">[称号]风林火山(送10000金券) 30元</option>
+                                                <option class="select-option" value="千古圣人">[称号]千古圣人(送10000金券) 30元</option>
+                                                <option class="select-option" value="东神饕餮">[称号]东神饕餮(送10000金券) 30元</option>
+                                            </select>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                            <div class="form-group checkbox white">
+                                                <div class="form-group"><select class="form-control-select" id="payway" name="payway" required>
+                                                    <option class="select-option" value="wx">微信</option>
+                                                    <option class="select-option" value="ali">支付宝</option>
+                                                </select>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                            <div class="form-group"><button onclick="buy()" class="form-control-submit-button">购买礼包</button></div>
+                                            <div class="form-message">
+                                                <div id="lmsgSubmit" class="h3 text-center hidden"></div>
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><a class="btn-outline-reg" href="index.html">返回</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ex-basic-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumbs"><a href="index.html">首页</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;礼包充值</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="constant/footer.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/morphext.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+    function buy() {
+      var player = $("#player").val();
+      var kit = $("#kit").val();
+      var payway = $("#payway").val();
+      if (player !== "") {
+        window.open("http://pay.ranmc.cn:666/?player=" + player + "&kit=" + kit + "&payway=" + payway);
+      }
+    }
+</script>
+<script type="text/javascript" src="constant/collect.js"></script>
 </body>
 </html>

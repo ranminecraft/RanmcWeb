@@ -1,129 +1,91 @@
-<!--
- _ __ __ _ _ __ (_) ___ __ _ 
-| '__/ _` | '_ \| |/ __/ _` |
-| | | (_| | | | | | (_| (_| |
-|_|  \__,_|_| |_|_|\___\__,_|
-                             
-MIT License
-
-Copyright (c) 2023 阿然姐姐
-
-https://github.com/ranminecraft/Ranmcweb
-
--->
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="referrer" content="no-referrer" />
-
-    <!-- Website Title -->
     <title>人机验证-桃花源-我的世界服务器(Minecraft)</title>
-
-    <!-- Styles -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    
-    <!-- Favicon  -->
     <link rel="icon" href="img/icon.png">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
-    
-    <!-- Preloader -->
-    <div class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
+<div class="spinner-wrapper">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<script type="text/javascript" src="constant/header.js"></script>
+<header id="header" class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>验证信息</h1>
+            </div>
         </div>
     </div>
-    <!-- end of preloader -->
-    
-
-    <!-- Navbar -->
-    <script type="text/javascript" src="constant/header.js"></script>
-    <!-- end of navbar -->
-
-    <!-- Header -->
-    <header id="header" class="ex-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>验证信息</h1>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </header> <!-- end of ex-header -->
-    <!-- end of header -->
-
-
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="index.html">首页</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;验证信息</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
-
-    <!-- Terms Content -->
-    <div class="ex-basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-container">
-                        <h3 id="result">无法验证结果。</h3>
-                    </div> <!-- end of text-container -->
-                <a class="btn-outline-reg" href="index.html">返回</a>
-                </div> <!-- end of text-container -->
+</header>
+<div class="ex-basic-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumbs">
+                    <a href="index.html">首页</a>
+                    <span>&nbsp;&nbsp;>&nbsp;&nbsp;验证信息</span>
+                </div>
             </div>
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-    </div> <!-- end of ex-basic -->
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="index.html">首页</a><span>&nbsp;&nbsp;>&nbsp;&nbsp;验证信息</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
-
-    <script type="text/javascript" src="constant/footer.js"></script>
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.min.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
-    <script src="js/js.js"></script>
-    <script>  
-        document.addEventListener("DOMContentLoaded", function() {
-        const contentElement = document.getElementById('result');
-        const result = window.location.search;
-        if (result === "?result=1") {
-            contentElement.textContent = "验证成功，请在游戏内查看结果。";
-        } else if (result === "?result=2") {
-            contentElement.textContent = "已确认，请勿重复操作。";
-        } else if (result === "?result=3") {
-            contentElement.textContent = "已超时，请重新点击游戏内最新链接。";
-        }});
-    </script>
-    <script type="text/javascript" src="constant/collect.js"></script>
+        </div>
+    </div>
+</div>
+<div class="ex-basic-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-container">
+                    <h3 id="result">无法验证结果。</h3>
+                </div>
+                <a class="btn-outline-reg" href="index.html">返回</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="ex-basic-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumbs">
+                    <a href="index.html">首页</a>
+                    <span>&nbsp;&nbsp;>&nbsp;&nbsp;验证信息</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="constant/footer.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/morphext.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const contentElement = document.getElementById('result');
+      const result = window.location.search;
+      if (result === "?result=1") {
+        contentElement.textContent = "验证成功，请在游戏内查看结果。";
+      } else if (result === "?result=2") {
+        contentElement.textContent = "已确认，请勿重复操作。";
+      } else if (result === "?result=3") {
+        contentElement.textContent = "已超时，请重新点击游戏内最新链接。";
+      }
+    });
+</script>
+<script type="text/javascript" src="constant/collect.js"></script>
 </body>
 </html>
