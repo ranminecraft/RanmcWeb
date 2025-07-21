@@ -43,6 +43,9 @@ document.writeln(`    <nav class="navbar navbar-expand-md navbar-dark navbar-cus
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="https://www.anzifan.com/"><span
                                 class="item-text">AnZiFan</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="https://www.minepay.top/"><span
+                                class="item-text">矿世问答</span></a>
                     </div>
                 </li>
             </ul>
