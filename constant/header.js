@@ -28,7 +28,7 @@ document.writeln(`    <nav class="navbar navbar-expand-md navbar-dark navbar-cus
                     <a class="nav-link page-scroll" href="news.html">游戏公告</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="https://gitee.com/xyfwdy/ranmc/issues" target="_blank">举报反馈</a>
+                    <a class="nav-link page-scroll" href="https://gitee.com/xyfwdy/ranmc" target="_blank">举报反馈</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="banlist.html">封禁列表</a>
@@ -37,3 +37,4 @@ document.writeln(`    <nav class="navbar navbar-expand-md navbar-dark navbar-cus
         </div>
 
     </nav>    `)
+
