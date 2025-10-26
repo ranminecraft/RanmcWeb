@@ -24,14 +24,17 @@ document.writeln(`    <nav class="navbar navbar-expand-md navbar-dark navbar-cus
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="index.html#picture">风景欣赏</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="news.html">游戏公告</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="news.html" id="navbarDropdown"
+                        role="button" aria-haspopup="true" aria-expanded="false">游戏公告</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="banlist.html"><span class="item-text">封禁列表</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="https://gitee.com/xyfwdy/ranmc" target="_blank"><span class="item-text">举报反馈</span></a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="https://gitee.com/xyfwdy/ranmc" target="_blank">举报反馈</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="banlist.html">封禁列表</a>
+                    <a class="nav-link page-scroll" href="shop.html" target="_blank">网页商店</a>
                 </li>
             </ul>
         </div>
