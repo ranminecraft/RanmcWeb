@@ -1,5 +1,5 @@
 // 在线玩家变化趋势
-fetch("https://api.ranmc.cc/status?type=tps")
+fetch("https://api.ranmc.cc/chart?type=tps")
   .then(res => res.json())
   .then(res => {
     if (res.code !== 200 || !res.rows) return;

@@ -1,6 +1,6 @@
 // 纪念套装销售统计
 $(function() {
-  $.get('https://api.ranmc.cc/status?type=season', function(res) {
+  $.get('https://api.ranmc.cc/chart?type=season', function(res) {
     if (res.code === 200 && res.rows) {
       const labels = Object.keys(res.rows);
       const data = Object.values(res.rows);
@@ -39,7 +39,7 @@ $(function() {
 });
 
 // TPS 与在线玩家变化趋势
-fetch("https://api.ranmc.cc/status?type=tps")
+fetch("https://api.ranmc.cc/chart?type=tps")
   .then(res => res.json())
   .then(res => {
     if (res.code !== 200 || !res.rows) return;
@@ -112,7 +112,7 @@ fetch("https://api.ranmc.cc/status?type=tps")
   });
 
 // PVP 段位统计
-fetch("https://api.ranmc.cc/status?type=pvp")
+fetch("https://api.ranmc.cc/chart?type=pvp")
   .then(res => res.json())
   .then(res => {
     if (res.code !== 200 || !res.rows) return;
