@@ -4,15 +4,26 @@ fetch("https://api.ranmc.cc/chart?type=status")
   .then(res => {
     if (res.code !== 200 || !res.data) return;
 
-    const lines = res.data;
     const container = document.getElementById("serverStatus");
-    container.innerHTML = "服务器线路状态";
+    container.innerHTML = "<h3>服务器线路状态</h3>";
 
-    for (const [line, online] of Object.entries(lines)) {
-      const statusEmoji = online ? "🟢" : "🔴";
+    for (const [line, online] of Object.entries(res.data)) {
       const div = document.createElement("div");
-      div.innerText = `${line} ${statusEmoji}`;
+      div.className = "status-item";
+      div.innerHTML = `
+        <span>${line}</span>
+        <span>${online ? "🟢 在线" : "🔴 离线"}</span>
+      `;
       container.appendChild(div);
+    }
+
+    if (res.time) {
+      const date = new Date(res.time);
+      const formatted = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")} ${String(date.getHours()).padStart(2, "0")}:${String(date.getMinutes()).padStart(2, "0")}`;
+      const updateDiv = document.createElement("div");
+      updateDiv.className = "status-update";
+      updateDiv.textContent = `状态上次更新时间 ${formatted}`;
+      container.appendChild(updateDiv);
     }
   });
 

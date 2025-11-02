@@ -2491,3 +2491,29 @@ a:hover.back-to-top {
 .refresh-button {  
     display: none; /* 隐藏元素 */  
 }
+
+  #serverStatus {
+    font-family: system-ui, sans-serif;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 16px;
+    max-width: 320px;
+  }
+  #serverStatus h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: #333;
+  }
+  .status-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 14px;
+  }
+  .status-update {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+  }
