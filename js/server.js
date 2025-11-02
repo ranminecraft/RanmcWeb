@@ -2,13 +2,13 @@
 fetch("https://api.ranmc.cc/chart?type=tps")
   .then(res => res.json())
   .then(res => {
-    if (res.code !== 200 || !res.rows) return;
+    if (res.code !== 200 || !res.data) return;
 
     // 解析数据
-    const rows = res.rows.reverse(); // 时间顺序从早到晚
-    const times = rows.map(e => e.Time);
-    const tpsValues = rows.map(e => parseFloat(e.Value));
-    const playerValues = rows.map(e => parseInt(e.Player));
+    const data = res.data.reverse(); // 时间顺序从早到晚
+    const times = data.map(e => e.Time);
+    const tpsValues = data.map(e => parseFloat(e.Value));
+    const playerValues = data.map(e => parseInt(e.Player));
 
     const ctx = document.getElementById("onlineChart").getContext("2d");
     new Chart(ctx, {

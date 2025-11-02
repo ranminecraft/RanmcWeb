@@ -1,9 +1,27 @@
+// 服务器状态
+fetch("https://api.ranmc.cc/chart?type=status")
+  .then(res => res.json())
+  .then(res => {
+    if (res.code !== 200 || !res.data) return;
+
+    const lines = res.data;
+    const container = document.getElementById("serverStatus");
+    container.innerHTML = "服务器线路状态";
+
+    for (const [line, online] of Object.entries(lines)) {
+      const statusEmoji = online ? "🟢" : "🔴";
+      const div = document.createElement("div");
+      div.innerText = `${line} ${statusEmoji}`;
+      container.appendChild(div);
+    }
+  });
+
 // 纪念套装销售统计
 $(function() {
   $.get('https://api.ranmc.cc/chart?type=season', function(res) {
-    if (res.code === 200 && res.rows) {
-      const labels = Object.keys(res.rows);
-      const data = Object.values(res.rows);
+    if (res.code === 200 && res.data) {
+      const labels = Object.keys(res.data);
+      const data = Object.values(res.data);
       const ctx = document.getElementById('seasonChart').getContext('2d');
       new Chart(ctx, {
         type: 'bar',
@@ -42,13 +60,13 @@ $(function() {
 fetch("https://api.ranmc.cc/chart?type=tps")
   .then(res => res.json())
   .then(res => {
-    if (res.code !== 200 || !res.rows) return;
+    if (res.code !== 200 || !res.data) return;
 
     // 解析数据
-    const rows = res.rows.reverse(); // 时间顺序从早到晚
-    const times = rows.map(e => e.Time);
-    const tpsValues = rows.map(e => parseFloat(e.Value));
-    const playerValues = rows.map(e => parseInt(e.Player));
+    const data = res.data.reverse(); // 时间顺序从早到晚
+    const times = data.map(e => e.Time);
+    const tpsValues = data.map(e => parseFloat(e.Value));
+    const playerValues = data.map(e => parseInt(e.Player));
 
     const ctx = document.getElementById("tpsChart").getContext("2d");
     new Chart(ctx, {
@@ -115,10 +133,10 @@ fetch("https://api.ranmc.cc/chart?type=tps")
 fetch("https://api.ranmc.cc/chart?type=pvp")
   .then(res => res.json())
   .then(res => {
-    if (res.code !== 200 || !res.rows) return;
+    if (res.code !== 200 || !res.data) return;
 
-    const labels = Object.keys(res.rows);
-    const data = Object.values(res.rows);
+    const labels = Object.keys(res.data);
+    const data = Object.values(res.data);
 
     const ctx = document.getElementById("pvpChart").getContext("2d");
     new Chart(ctx, {
