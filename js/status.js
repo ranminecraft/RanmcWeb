@@ -22,7 +22,7 @@ fetch("https://api.ranmc.cc/chart?type=status")
       const formatted = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")} ${String(date.getHours()).padStart(2, "0")}:${String(date.getMinutes()).padStart(2, "0")}`;
       const updateDiv = document.createElement("div");
       updateDiv.className = "status-update";
-      updateDiv.textContent = `状态上次更新时间 ${formatted}`;
+      updateDiv.textContent = `上次更新时间 ${formatted}`;
       container.appendChild(updateDiv);
     }
   });
