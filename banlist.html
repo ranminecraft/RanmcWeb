@@ -4,21 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="referrer" content="no-referrer" />
-    <meta name="description" content="Aria is a business focused HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
-    <meta name="author" content="Inovatik">
-    <meta property="og:site_name" content="" />
-    <meta property="og:site" content="" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:type" content="article" />
-    <title>封禁列表-桃花源-我的世界服务器(Minecraft)</title>
+    <title>封禁列表 - 桃花源 - 我的世界服务器(Minecraft)</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/bootstrap-table.min.css" rel="stylesheet">
     <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body data-spy="scroll" data-target=".fixed-top">
 <div class="spinner-wrapper">
     <div class="spinner">
@@ -27,7 +20,9 @@
         <div class="bounce3"></div>
     </div>
 </div>
+
 <script type="text/javascript" src="constant/header.js"></script>
+
 <header id="header" class="ex-header">
     <div class="container">
         <div class="row">
@@ -37,6 +32,7 @@
         </div>
     </div>
 </header>
+
 <div class="ex-basic-1">
     <div class="container">
         <div class="row">
@@ -49,6 +45,7 @@
         </div>
     </div>
 </div>
+
 <div class="ex-basic-1">
     <div class="container">
         <div class="row">
@@ -56,161 +53,28 @@
         </div>
     </div>
 </div>
-<div class="ex-basic-1">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumbs">
-                    <a href="index.html">首页</a>
-                    <span>&nbsp;&nbsp;>&nbsp;&nbsp;封禁列表</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <script type="text/javascript" src="constant/footer.js"></script>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.js"></script>
-<script src="js/tableExport.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-table.min.js"></script>
 <script src="js/bootstrap-table-locale-all.min.js"></script>
 <script src="js/bootstrap-table-export.min.js"></script>
-<script src="js/swiper.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/morphext.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/tableExport.min.js"></script>
 <script src="js/scripts.js"></script>
-</body>
-<script>
-    //页面初始化var $table;       //初始化bootstrap-table的内容
-    function InitMainTable() {
-      //记录页面bootstrap-table全局变量$table，方便应用
-      var queryUrl = 'https://api.ranmc.cc/banlist'
-      $table = $('#table').bootstrapTable({
-        locale: 'zh-CN',
-        url: queryUrl, //请求后台的URL（*）
-        method: 'GET', //请求方式（*）
-        toolbar: '#toolbar', //工具按钮用哪个容器
-        striped: true, //是否显示行间隔色
-        cache: true, //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
-        pagination: true, //是否显示分页（*）
-        sortable: true, //是否启用排序
-        sortOrder: "desc", //排序方式
-        sidePagination: "server", //分页方式：client客户端分页，server服务端分页（*）
-        pageNumber: 1, //初始化加载第一页，默认第一页,并记录
-        pageSize: 30, //每页的记录行数（*）
-        pageList: [10, 20, 30, 50], //可供选择的每页的行数（*）
-        search: false, //是否显示表格搜索
-        strictSearch: true,
-        showColumns: true, //是否显示所有的列（选择显示的列）
-        showRefresh: true, //是否显示刷新按钮
-        minimumCountColumns: 2, //最少允许的列数
-        clickToSelect: true, //是否启用点击选中行
-        //height: 500,                      //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
-        uniqueId: "ID", //每一行的唯一标识，一般为主键列
-        showToggle: true, //是否显示详细视图和列表视图的切换按钮
-        cardView: false, //是否显示详细视图
-        detailView: false, //是否显示父子表
-        //得到查询的参数
-        queryParams: function(params) {
-          //这里的键的名字和控制器的变量名必须一致，这边改动，控制器也需要改成一样的
-          var temp = {
-            limit: params.limit, //页面大小
-            page: (params.offset / params.limit) + 1, //页码
-            sort: params.sort, //排序列名
-            sortOrder: params.order //排位命令（desc，asc）
-          };
-          return temp;
-        },
-        columns: [{
-          field: 'id',
-          title: '序号',
-          align: 'center'
-        }, {
-          field: 'player',
-          title: '玩家',
-          align: 'center'
-        }, {
-          field: 'reason',
-          title: '封禁缘由',
-          align: 'center',
-        }, {
-          field: 'banTime',
-          title: '封禁时间',
-          align: 'center',
-          sortable: true,
-        }, {
-          field: 'releaseTime',
-          title: '解禁时间',
-          align: 'center',
-        }, {
-          field: 'operator',
-          title: '操作人',
-          align: 'center',
-        }, ],
-        onLoadSuccess: function() {},
-        onLoadError: function() {
-          showTips("数据加载失败！");
-        },
-        onDblClickRow: function(row, $element) {
-          var id = row.ID;
-          EditViewById(id, 'view');
-        },
-      });
-    }; // $('#table').bootstrapTable({//      url: 'data1.json',    //  });
-    //   function initTable() {
-    //     $table.bootstrapTable('destroy').bootstrapTable({
-    //       height: 550,
-    //       locale: 'zh-CN',
-    //       columns: [
-    //       [
-    //       {
-    //           field: 'id',
-    //           title: '序号',  //           align: 'center'
-    //         },
-    //         {
-    //           field: 'player',
-    //           title: '玩家',  //           align: 'center'
-    //         },
-    //         {
-    //           field: 'reason',
-    //           title: '封禁缘由',
-    //           align: 'center',
-    //         },
-    //         {
-    //           field: 'banTime',
-    //           title: '封禁时间',
-    //           align: 'center',
-    //           sortable: true,
-    //         },
-    //         {
-    //           field: 'releaseTime',
-    //           title: '解禁时间',
-    //           align: 'center',
-    //         },
-    //         {
-    //           field: 'operator',
-    //           title: '操作人',
-    //           align: 'center',
-    //         }
-    //       ]
-    //     ]
-    //   })
-    // }
-    $(function() {
-      InitMainTable()
-    })
-</script>
-<style>
-    .select,
-    #locale {
-      width: 100%;
-    }
+<script src="js/banlist.js"></script>
 
-    .like {
-      margin-right: 10px;
-    }
+<style>
+.select, #locale {
+  width: 100%;
+}
+.like {
+  margin-right: 10px;
+}
 </style>
+
 <script type="text/javascript" src="constant/collect.js"></script>
+</body>
 </html>
